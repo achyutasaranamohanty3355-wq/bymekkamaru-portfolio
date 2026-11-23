@@ -44,6 +44,18 @@ header{background:rgba(7,10,17,.68);backdrop-filter:blur(22px) saturate(140%);-w
 .btn{border-radius:13px;box-shadow:0 10px 28px rgba(52,120,246,.18)}
 @media(max-width:680px){.detailhero{margin-top:18px;padding:25px 21px;border-radius:22px}.detailsection{padding:22px 19px;border-radius:19px}.framebox,.card{border-radius:16px}}
 
+
+
+/* Minimal interaction polish — byAchyuta */
+@keyframes pageSoftIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes buttonTap{0%{transform:scale(1)}45%{transform:scale(.965)}100%{transform:scale(1)}}
+body{animation:pageSoftIn .55s cubic-bezier(.2,.7,.25,1) both}
+.btn,button,.nav-cta,.card-link,.contact-links a{transition:transform .18s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease,filter .2s ease}
+.btn:active,button:active,.nav-cta:active,.card-link:active,.contact-links a:active{transform:scale(.965);filter:brightness(1.12)}
+.btn:focus-visible,button:focus-visible,.nav-cta:focus-visible,.card-link:focus-visible,.contact-links a:focus-visible{outline:2px solid rgba(91,151,255,.9);outline-offset:4px}
+.project-card,.detailsection,.detailhero,.panel,.content-card,.screen-card,.framebox{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.project-card:hover,.detailsection:hover,.detailhero:hover,.panel:hover,.content-card:hover,.screen-card:hover,.framebox:hover{transform:translateY(-2px);border-color:rgba(121,168,255,.28)}
+@media(prefers-reduced-motion:reduce){body{animation:none!important}.btn,button,.nav-cta,.card-link,.contact-links a,.project-card,.detailsection,.detailhero,.panel,.content-card,.screen-card,.framebox{transition:none!important}.btn:active,button:active,.nav-cta:active,.card-link:active,.contact-links a:active{transform:none!important}}
 </style></head><body>
 <header><div class="wrap"><nav><a class="brand" href="../index.html">A<span class="accent">.</span> <span style="font-weight:500">byAchyuta</span></a><button class="menu-toggle" id="projectMenu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="projectNav"><span></span><span></span></button><div class="navlinks" id="projectNav"><a href="../index.html#work">Projects</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div></nav></div></header><main>
 <section class="detailhero wrap"><div class="eyebrow">02 / PRODUCT DESIGN · SMART FARMING</div><h1>AgriSathi</h1><p class="lead">Make useful farming information and digital tools easier for farmers to access.</p><div class="meta"><span><b>Role:</b> UI/UX Designer</span><span><b>Platform:</b> Android mobile app</span><span><b>Market:</b> Farmers in India</span><span><b>Tools:</b> Figma · FigJam</span></div><a class="btn secondary" href="../index.html#work">← Back to projects</a></section>
