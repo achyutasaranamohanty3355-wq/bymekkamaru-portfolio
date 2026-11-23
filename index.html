@@ -145,6 +145,18 @@ header{background:rgba(7,10,17,.64);backdrop-filter:blur(24px) saturate(145%);-w
 @media(max-width:680px){.hero{padding:38px 0 50px}.hero-grid{grid-template-columns:1fr;gap:13px}.hero-art{min-height:340px;height:340px;order:-1}.hero-profile{width:140px;height:140px}.hero-profile-label{top:calc(50% + 91px)}.hero-art-caption{bottom:17px;left:20px;right:20px;padding:11px 13px}.hero-art-caption b{font-size:11px}.hero-copy-wrap{padding:27px 23px;border-radius:24px}.hero h1{font-size:clamp(55px,14vw,76px)}.section{padding:58px 0}.work-grid{grid-template-columns:1fr;gap:13px}.project-card:first-child,.project-card:nth-child(2),.project-card:nth-child(3){grid-column:auto}.project-card:first-child .card-visual,.card-visual,.project-card:last-child .card-visual{height:205px}.card-body{padding:20px}.about-grid,.skills-grid{grid-template-columns:1fr;gap:13px}.portrait-placeholder{min-height:320px}.portrait-photo{min-height:300px;max-height:390px}.about-copy{padding:25px}.contact-panel{padding:25px;gap:20px}.section-head{margin-bottom:20px}}
 @media(prefers-reduced-motion:reduce){.hero-profile,.float-card{animation:none!important}}
 
+
+
+/* Minimal interaction polish — byAchyuta */
+@keyframes pageSoftIn{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@keyframes buttonTap{0%{transform:scale(1)}45%{transform:scale(.965)}100%{transform:scale(1)}}
+body{animation:pageSoftIn .55s cubic-bezier(.2,.7,.25,1) both}
+.btn,button,.nav-cta,.card-link,.contact-links a{transition:transform .18s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease,filter .2s ease}
+.btn:active,button:active,.nav-cta:active,.card-link:active,.contact-links a:active{transform:scale(.965);filter:brightness(1.12)}
+.btn:focus-visible,button:focus-visible,.nav-cta:focus-visible,.card-link:focus-visible,.contact-links a:focus-visible{outline:2px solid rgba(91,151,255,.9);outline-offset:4px}
+.project-card,.detailsection,.detailhero,.panel,.content-card,.screen-card,.framebox{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.project-card:hover,.detailsection:hover,.detailhero:hover,.panel:hover,.content-card:hover,.screen-card:hover,.framebox:hover{transform:translateY(-2px);border-color:rgba(121,168,255,.28)}
+@media(prefers-reduced-motion:reduce){body{animation:none!important}.btn,button,.nav-cta,.card-link,.contact-links a,.project-card,.detailsection,.detailhero,.panel,.content-card,.screen-card,.framebox{transition:none!important}.btn:active,button:active,.nav-cta:active,.card-link:active,.contact-links a:active{transform:none!important}}
 </style>
 </head>
 <body><a class="skip" href="#main">Skip to content</a><div class="progress" id="progress"></div><div class="cursor-glow" id="cursorGlow"></div>
